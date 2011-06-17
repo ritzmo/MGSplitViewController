@@ -518,6 +518,10 @@
 		[self.masterViewController viewWillDisappear:animated];
 	}
 	[self.detailViewController viewWillDisappear:animated];
+    
+    if (_hiddenPopoverController.popoverVisible) {
+        [_hiddenPopoverController dismissPopoverAnimated:NO];
+    }
 }
 
 
