@@ -999,7 +999,9 @@
         }
         [_viewControllers replaceObjectAtIndex:0 withObject:newMaster];
 
-		[self layoutSubviews];
+        if ([self isViewLoaded]) {
+            [self layoutSubviews];
+        }
 	}
 }
 
@@ -1035,7 +1037,9 @@
         }
         [_viewControllers replaceObjectAtIndex:1 withObject:newDetail];
         
-		[self layoutSubviews];
+        if ([self isViewLoaded]) {
+            [self layoutSubviews];
+        }
 	}
 }
 
