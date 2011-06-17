@@ -580,8 +580,9 @@
 		
 		// If the user runs an app in portrait, presents a modal fullscreen view controller than dismiss it when the device is landscape, the view will NOT have a window (obviously) and without a sanity check the app will crash.
 		
-		if (self.view.window)
-		[_hiddenPopoverController presentPopoverFromRect:CGRectZero inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:NO];
+		if (self.view.window) {
+            [_hiddenPopoverController presentPopoverFromRect:CGRectZero inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:NO];
+        }
 		
 		// Remove master from popover and destroy popover, if it exists.
 		[_hiddenPopoverController dismissPopoverAnimated:NO];
