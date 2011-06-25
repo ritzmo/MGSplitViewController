@@ -1000,7 +1000,7 @@
         }
         [_viewControllers replaceObjectAtIndex:0 withObject:newMaster];
 
-        if ([self isViewLoaded]) {
+        if ([self isViewLoaded] && [master isViewLoaded]) {
             [self layoutSubviews];
         }
 	}
@@ -1038,7 +1038,7 @@
         }
         [_viewControllers replaceObjectAtIndex:1 withObject:newDetail];
         
-        if ([self isViewLoaded]) {
+        if ([self isViewLoaded] && [detail isViewLoaded]) {
             [self layoutSubviews];
         }
 	}
