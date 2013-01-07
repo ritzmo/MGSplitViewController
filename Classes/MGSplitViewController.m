@@ -559,7 +559,7 @@
 		[_hiddenPopoverController release];
 		_hiddenPopoverController = nil;
 		[self.masterViewController viewWillDisappear:NO];
-		_hiddenPopoverController = nil;//[[UIPopoverController alloc] initWithContentViewController:self.masterViewController]; NOTE: Disabling the popover since we don't ever show it and it causes problems.
+		_hiddenPopoverController = [[UIPopoverController alloc] initWithContentViewController:self.masterViewController];
 		[self.masterViewController viewDidDisappear:NO];
 		
 		// Create and configure _barButtonItem.
